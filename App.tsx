@@ -16,7 +16,8 @@ import {
   Text,
   useColorScheme,
   View,
-  Image
+  Image,
+  ProgressBarAndroid
 } from 'react-native';
 
 import {
@@ -40,6 +41,11 @@ function App(): React.JSX.Element {
       <LottieView source={require("./assets/merry1.json")} autoPlay loop style={{height: 150, width: 150}} />
       <LottieView source={require("./assets/gifts.json")} autoPlay loop style={{height: 150, width: 150}} />
       {/* <LottieView source={require("./assets/lottie.json")} autoPlay loop style={{height: 150, width: 150}} /> */}
+
+      <ProgressBarAndroid styleAttr="Horizontal"
+       indeterminate={false}
+       progress={0.5} 
+       color="#2196F3" />
     </View>
   );
 }
